@@ -20,6 +20,6 @@ from fourStars import views as fourStars_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fourStars_views.home, name='home'),
-
     path('about/', fourStars_views.about, name='about'),
+    path('viewScreen/',fourStars_views.viewScreen,name='viewScreen')
 ]
