@@ -22,4 +22,5 @@ urlpatterns = [
     path('', fourStars_views.home, name='home'),
 
     path('about/', fourStars_views.about, name='about'),
+    path('search/', fourStars_views.searchBar, name='search')
 ]

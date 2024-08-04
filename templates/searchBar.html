@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Stars</title>
+    <style>
+        body {
+            background-color: #2c2c2c; /* Gris oscuro agradable */
+            color: #e0e0e0; /* Texto gris claro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-bar {
+            background-color: #3d3d3d; /* Gris más claro para la barra */
+            border: 1px solid #555;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la card */
+        }
+
+        .search-bar input {
+            background-color: #3d3d3d;
+            border: none;
+            color: #e0e0e0;
+            flex-grow: 1;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: #555;
+            border: none;
+            border-radius: 3px;
+            color: #e0e0e0;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        .search-bar button:hover {
+            background-color: #777;
+        }
+
+        .card {
+            background-color: #3d3d3d; /* Gris más claro para la card */
+            border: 1px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button>Buscar</button>
+    </div>
+    <div class="card">
+        <h2>Usar barra de búsqueda (Nathaly Ramirez Henao)</h2>
+        <p><strong>Feature:</strong> use search bar</p>
+        <p><strong>Scenario:</strong> As a user, I want to access a search bar to be able to search for the teachers I am interested in.</p>
+        <p><strong>Given:</strong> Given the case where the user is on the home screen, a search bar should appear.</p>
+        <p><strong>When:</strong> When the user wants to search for a teacher.</p>
+        <p><strong>Then:</strong> Then the search bar should be usable correctly.</p>
+    </div>
+</body>
+</html>

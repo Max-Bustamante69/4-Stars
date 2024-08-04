@@ -12,3 +12,5 @@ def home(request):
 def about(request):
     return HttpResponse("<h1>About Four Stars </h1>")
 
+def searchBar(request):
+    return render(request, "searchBar.html")
