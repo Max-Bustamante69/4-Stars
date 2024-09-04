@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.db.models import Count, Prefetch, Q
 from .models import Professor, Rating
 from django.views.decorators.cache import cache_page
+from .forms import UserRegistrationForm
+from django.contrib.auth import login
 
 @cache_page(60 * 15)
 def home(request):
@@ -89,3 +91,16 @@ def professor_view(request, professor_id=None):
 
     return render(request, 'fourStars/professorView.html', context)
 
+def signupScreen(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
+            login(request, user)  # Opcional: Iniciar sesión automáticamente al registrarse
+            return redirect('')  # Redirigir a una página de éxito o inicio
+    else:
+        form = UserRegistrationForm()
+
+    return render(request, 'fourStars/signupScreen.html', {'form': form})
